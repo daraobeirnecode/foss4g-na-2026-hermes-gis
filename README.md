@@ -2,378 +2,603 @@
 
 ## Presenter brief
 
-- Speakers: Silas Tom’s and Dara O’Beirne. Speaker labels below use Silas and Dara.
-- Speaker assignment: Silas owns the first half (00:00–10:00): Hermes background, workflow fit, harness comparison and GISMap Online. Dara owns the second half (10:00–20:00): the 311 app with 3D columns, permit report, skills, repeatability, performance and closing. Both take Q&A.
-- This updates the local speaker notes only; no conference listing or external speaker registration has been changed.
-- Accepted session: https://talks.osgeo.org/foss4g-na-2026/talk/GXG78A/
-- Published slot: November 3, 2026, 14:00–14:25, Bataglieri. No timezone inferred beyond the program listing.
-- Format: 20 minutes of content plus 5 minutes of questions; confirm the conference’s Q&A convention.
-- Audience: GIS practitioners who understand spatial workflows but may not know agent harnesses.
-- Structure: Silas — Hermes product/background, harness choice and GISMap Online → handoff → Dara — 311 columns app, permits and practical lessons.
-- Corrected demo selection: the 311 application with 3D columns, NOT Sacramento 311 Atlas / the point-based 3D Explorer. Exact title and URL remain to be confirmed.
-- Thesis: Hermes provides a persistent, extensible way to coordinate GIS work. Results become dependable through bounded tasks, deterministic tools, reusable procedures and human review—not through the harness alone.
-- Takeaway: “Let the model interpret the request. Let GIS compute the answer. Make the evidence portable.”
-- Scope: revised presentation outline and demo storyboard. This is not a finished slide deck, a new application release, a benchmark, or a completed rehearsal kit.
+- **Speakers:** Silas Toms and Dara O’Beirne. Speaker labels below use Silas and Dara.
+- **Session:** FOSS4G North America 2026. The published program lists November 3, 2026, 14:00–14:25, Bataglieri. Use the conference program’s displayed time convention.
+- **Accepted session:** https://talks.osgeo.org/foss4g-na-2026/talk/GXG78A/
+- **Format:** 20 minutes of presentation and demonstrations, followed by 5 minutes of questions.
+- **Audience:** GIS practitioners, civic technologists and public-sector teams who understand spatial workflows but may be unfamiliar with agent software.
+- **Current deck:** 22 slides. Slides 1–18 form the presentation, including the questions slide. Slides 19–22 are hidden backup slides.
+- **Speaker assignment:** Silas presents slides 1–8, from 00:00 to 10:00. Dara presents slides 9–17, from 10:00 to 20:00. Both use slide 18 for questions.
+- **Order:** Hermes, task execution, memory, Mercator, responsibilities, tool comparison and GISMap Online. Then Service Terrain, the September permit report, Obsidian as a second brain, reusable project knowledge, procedures, repeatability, cost, performance and the closing exercise.
+- **Second-brain placement:** “Obsidian as a second brain” and “Project knowledge in a GIS workflow” now follow the permit report directly, as slides 11 and 12.
+- **Central point:** Hermes coordinates work across models, tools and project information. GIS scripts perform the calculations. People define the question, judge the result and approve its release.
+- **Takeaway:** Keep the source, processing rules and review evidence with the output so another person can inspect or repeat the work.
+- **Terminology:** Call Mercator **the GIS agent profile**. Distinguish Hermes Agent, the software runtime, from the separately named Hermes model family. Explain specialist terms when they first appear.
+
+This outline follows the reordered PowerPoint. The timing below replaces the earlier outline’s allocation and accounts for the added Hermes and second-brain material. Detailed reference points support rehearsal and questions. They are not a script to read in full during the talk.
+
+## Timing and speaker plan
+
+| Slide | Title | Speaker | Elapsed time | Budget |
+| --- | --- | --- | --- | --- |
+| 1 | Geospatial AI Agents in Practice | Silas | 00:00–00:30 | 0:30 |
+| 2 | Hermes | Silas | 00:30–01:20 | 0:50 |
+| 3 | How Hermes carries out a task | Silas | 01:20–02:00 | 0:40 |
+| 4 | Memory, skills and project knowledge | Silas | 02:00–02:40 | 0:40 |
+| 5 | Mercator | Silas | 02:40–03:30 | 0:50 |
+| 6 | The division of work | Silas | 03:30–04:10 | 0:40 |
+| 7 | Choosing a working environment | Silas | 04:10–07:00 | 2:50 |
+| 8 | GISMap Online | Silas | 07:00–10:00 | 3:00 |
+| 9 | Sacramento 311 | Dara | 10:00–12:15 | 2:15 |
+| 10 | Sacramento permit report | Dara | 12:15–14:15 | 2:00 |
+| 11 | Obsidian as a second brain | Dara | 14:15–15:00 | 0:45 |
+| 12 | Project knowledge in a GIS workflow | Dara | 15:00–15:45 | 0:45 |
+| 13 | Reusable GIS procedures | Dara | 15:45–16:30 | 0:45 |
+| 14 | What a repeatable run records | Dara | 16:30–17:15 | 0:45 |
+| 15 | Agent time and cost | Dara | 17:15–18:00 | 0:45 |
+| 16 | Processing and map performance | Dara | 18:00–19:00 | 1:00 |
+| 17 | A first workflow | Dara | 19:00–20:00 | 1:00 |
+| 18 | Questions | Both | 20:00–25:00 | 5:00 |
+| 19 | Monthly permit report | Backup | As needed | Outside main talk |
+| 20 | Mercator skill references | Backup | As needed | Outside main talk |
+| 21 | Public-sector use | Backup | As needed | Outside main talk |
+| 22 | Hermes setup and access | Backup | As needed | Outside main talk |
 
 ## Speaker handoff
 
-**At 10:00, Silas to Dara — suggested wording:** “That is Hermes and how it can work with a reusable GIS viewer. Dara will now show the 311 columns application and permit report, then explain the skills, checks and performance choices behind repeatable results.”
+**At 10:00, Silas to Dara, suggested wording:**
 
-**Dara’s opening — suggested wording:** “I’ll start with the 311 columns map, then show the permit reporting workflow. After those, I’ll cover what makes the work repeatable rather than a one-off demo.”
+> “That is the Hermes setup and one way to use it with a reusable GIS viewer. Dara will now show Service Terrain and the permit report, then explain how project notes, procedures and checks help us repeat the work.”
+
+**Dara’s opening, suggested wording:**
+
+> “I’ll start with the 311 map and the September permit report. Then I’ll show where we keep the project knowledge and how we use it when the same work comes around again.”
 
 ## Slide-by-slide outline
 
-### 1. Hermes for practical GIS work — 00:00–00:30
+### 1. Geospatial AI Agents in Practice — 00:00–00:30
 
 **Speaker: Silas.**
 
-**On screen:** Talk title, both speakers’ names, and a preview image of the three applications.
+**On screen:** “Geospatial AI Agents in Practice,” the subtitle “Sacramento Open Data and Hermes,” Silas Toms and Dara O’Beirne, and the Sacramento Tower Bridge photograph.
+
+**Purpose:** Establish the practical scope and the two speakers’ roles.
 
 **Suggested opening:**
 
-> “We use Hermes as a working assistant around GIS: finding data, coordinating development, checking outputs and helping turn repeated work into reusable procedures. I’ll introduce Hermes and demonstrate GISMap Online. Dara will show the 311 columns app and permit report, then cover repeatability and performance.”
+> “We use Hermes around GIS work: finding data, coordinating development, checking outputs and turning repeated work into procedures we can use again. I’ll introduce the setup and GISMap Online. Dara will show two Sacramento examples and explain how we keep the work documented and reviewable.”
 
-Promise useful outputs and an honest account of the process—not an autonomous GIS analyst or a model leaderboard.
+Set expectations for concrete applications, source checks and human judgment. The examples show workflows and development assistance. They do not establish that every application runs a language model for its visitors.
 
-### 2. What is Hermes? — 00:30–02:00
+**Visual:** Retain the current cover photo and corrected names. No extra introductory diagram is needed.
 
-**Speaker: Silas.**
-
-**On screen:** “An open-source agent framework from Nous Research—not a language model and not a GIS engine.”
-
-Explain an **agent harness** as the software that connects a model to tools, context, execution and controls.
-
-Five product capabilities:
-
-- **Tools:** work with files, commands, APIs and browsers within configured permissions.
-- **Skills:** load reusable task procedures and supporting resources when needed.
-- **Continuity:** persistent memory and session retrieval reduce repeated setup and explanation.
-- **Interfaces:** use the terminal or configured messaging integrations such as Telegram.
-- **Operations:** schedule work and connect additional tools through MCP or other integrations.
-
-Hermes supports multiple model providers. Provider choice affects quality, cost, privacy and availability; switching providers does not guarantee equivalent results.
-
-**Visual:** One sanitized terminal or messaging example beside the five labels. Do not show private chat history, credentials or personal filesystem paths.
-
-**Key distinction:** Skills preserve procedures; they do not retrain model weights. Persistent memory can be stale and must not replace current source evidence.
-
-### 3. A GIS setup: Mercator — 02:00–03:00
+### 2. Hermes — 00:30–01:20
 
 **Speaker: Silas.**
 
-**On screen:** “A general-purpose agent, configured for GIS.”
+**On screen:** “Hermes Agent, the open-source runtime” and “Connects a chosen language model to tools and reusable procedures.” The supplied Hermes profile image appears beside four capabilities.
 
-Mercator is Dara’s GIS-focused Hermes profile, not another model or a separate GIS engine.
-
-```text
-Dara: question, constraints and approvals
-                    ↓
-Hermes / Mercator: context, skills and coordination
-           ↙                         ↘
-Tested GIS tools                 Coding agents
-Python / SQL / APIs              Claude Code / Codex
-           ↘                         ↙
-        Data artifacts, application and tests
-                    ↓
-          Human review and approved release
-```
+**Purpose:** Explain the software’s role before introducing the GIS profile.
 
 **Talk points:**
 
-- GIS skills encode source checks, CRS rules, joins, map behavior and acceptance criteria.
-- Python, SQL and GIS libraries perform the calculations.
-- Claude Code or Codex can develop and test the implementation; Hermes need not replace them.
-- Completed scripts can be reused without asking a model to regenerate them.
-- Profiles separate context and configuration. They are not OS security sandboxes.
+- A language model interprets the request and proposes actions. Hermes supplies the surrounding software that can execute permitted tool requests and keep working context.
+- Tools can work with files, commands, APIs and browsers, subject to the configuration and host’s access controls.
+- Skills are written procedures with checks and stop conditions.
+- Saved details support continuity between sessions, but they need correction when a project or source changes.
+- Recurring work can use scheduling. A routine script is sufficient when the task needs no model reasoning.
 
-**Transition:** “I’ll demonstrate the reusable viewer first. Dara will then show the 311 columns app and recurring report.”
+Briefly distinguish **Hermes Agent** from the **Hermes model family**. This presentation concerns the agent runtime and its GIS workflow. Do not describe the profile image as proof of a specific model configuration.
 
-### 4. What the agent does—and what it does not — 03:00–04:00
+**Key qualification:** Model-provider choice affects cost, availability and data handling. Running the agent software locally does not by itself keep every request local.
 
-**Speaker: Silas.**
+**Transition:** “The useful part is the sequence of actions and checks around a request.”
 
-**On screen:** Request → inspect → compute → present → verify.
-
-- **AI assistance:** translate the request into a bounded task; inspect schemas; help develop code; explain recorded results; coordinate checks.
-- **Deterministic GIS:** date filtering, joins, geometry processing, spatial aggregation, counts and measurements.
-- **Human responsibility:** choose the question, judge the interpretation, review the experience and approve publication.
-
-Introduce the source-to-output pattern:
-
-> Public/approved data → tested processing → compact artifacts → web map/report → evidence and limitations.
-
-A public ArcGIS REST source can feed an open-source processing and presentation stack. Source hosting, software licensing and data reuse rights are separate questions.
-
-Distinguish **built with AI assistance** from **contains runtime AI**. None of the demos requires a claim that a language model answers every visitor’s query.
-
-### 5. Why Hermes—and when not to use it — 04:00–07:00
+### 3. How Hermes carries out a task — 01:20–02:00
 
 **Speaker: Silas.**
 
-**On screen:** “Choose for the workflow, not the logo.”
+**On screen:** Four stages: establish the task, use a tool, inspect the result, finish and report.
 
-**Why Hermes fits this practice:**
+**Purpose:** Give the audience a concrete explanation of an agent’s working loop.
 
-- GIS work crosses research, data acquisition, analysis, development and recurring reporting—not just one repository.
-- Persistent context, reusable skills, messaging and scheduling are available in one configurable agent environment.
-- Model-provider flexibility and an open-source framework make it possible to adapt the setup.
-- Hermes can coordinate provider-native coding tools rather than forcing every task through its own implementation loop.
+Use a short GIS example through all four stages:
 
-**When Claude Code is a sensible primary tool:**
+1. **Establish the task:** Identify the reporting month, approved source and expected report. Resolve missing information before proceeding.
+2. **Use a tool:** Inspect an ArcGIS service, read an approved file or run an existing extraction script.
+3. **Inspect the result:** Check returned records and errors. Compare the map with the data rather than accepting a successful command as proof.
+4. **Finish and report:** Reconcile the output with the request, preserve limitations and leave a result for human review.
 
-- The job is focused repository development, debugging, testing or code review in a Claude-centered workflow.
-- Its existing terminal/IDE/desktop/cloud integrations meet the need without another coordination layer.
+Explain that the next action depends on the previous result. An error may require a revised step or a stop, rather than repeated attempts without a limit.
 
-**When Codex is a sensible primary tool:**
+**Boundary:** Time, cost and retry limits belong to the task. A missing source or failed acceptance check can be a valid reason to stop.
 
-- The job is focused implementation, testing or review in its local/IDE/cloud workflows.
-- Scripting and non-interactive execution fit the development process.
+### 4. Memory, skills and project knowledge — 02:00–02:40
 
-**Fairness checks:**
+**Speaker: Silas.**
 
-- Claude Code and Codex also support reusable skills and tool integrations. Do not claim these are unique to Hermes.
-- Claude Code documents memory, channels, routines and scheduled tasks; do not describe it as terminal-only or unable to automate.
-- Codex CLI is open source under Apache-2.0. “Open source versus closed source” is not a valid Hermes-versus-Codex CLI distinction.
-- The open-source status of a harness does not determine the licensing or data handling of its models, hosted services or basemaps.
-- Hermes adds configuration, maintenance and coordination overhead. For one bounded code change, direct use of the coding tool may be simpler.
+**On screen:** Current conversation, saved memory, skills and Obsidian vault.
+
+**Purpose:** Separate four kinds of information that can otherwise sound like one feature.
+
+| Information | What it holds | GIS example |
+| --- | --- | --- |
+| Current conversation | The current request and recent tool results | The selected reporting month and an error returned by a query |
+| Saved memory | Compact facts and conventions reused in later sessions | A project location or a preferred output convention |
+| Skills | Procedures for doing a task | How to validate a service and reconcile extracted records |
+| Obsidian vault | Longer notes, references and recorded decisions | Source definitions, join decisions and lessons from prior reports |
+
+The built-in memory is bounded and associated with a profile. Skills load relevant procedural information when needed. An Obsidian vault is a separate collection of files. Reading or searching it requires appropriate configuration and permission.
 
 **Suggested line:**
 
-> “I choose Hermes for continuity across the GIS workflow. I still use Claude Code and Codex for development. It is a coordination choice, not a claim that one harness wins every task.”
+> “The conversation holds today’s task. Memory holds a few durable details. Skills hold procedures. The notebook holds the longer project record.”
 
-### 6. Demo 1: GISMap Online — 07:00–10:00
+Do not imply that saving notes retrains the model, that all notes are automatically available, or that retrieved information is necessarily correct. Dara will return to Obsidian after the permit example.
+
+### 5. Mercator — 02:40–03:30
 
 **Speaker: Silas.**
 
-**User-supplied URL:** http://gismap.online/
+**On screen:** “Mercator” with the subtitle **“The GIS agent profile.”** Four rows describe request limits, GIS procedures, existing tools, and review records.
 
-**Public documentation:** https://www.gismap.online/guides/ai-agents/
+**Purpose:** Explain how the general agent environment becomes useful for a defined GIS workflow.
 
-**Purpose:** Show a reusable browser GIS workspace rather than another single-purpose application. The product describes opening ArcGIS REST services, GeoJSON and local geospatial files for 2D/3D inspection, styling and export.
+**Talk points:**
 
-**Proposed three-minute sequence:**
+- The profile keeps settings, project information and reusable procedures together.
+- A request names approved inputs, the reporting period, expected outputs and actions requiring approval.
+- GIS procedures specify coordinate systems, identifiers, date fields, missing values and join rules.
+- Python, SQL and GIS libraries perform calculations. Claude Code or Codex can help develop and test the implementation.
+- A person checks the actual map, reconciles the counts and reviews the report before release.
 
-1. Open one prepared public layer or a small approved local GeoJSON; avoid starting with an empty workspace and searching for data on stage.
-2. Inspect an attribute and apply one meaningful style. Explain the field and units, including any no-data codes.
-3. Briefly change the camera/view to demonstrate the spatial context without spending the segment navigating.
-4. Show the agent connection: a validated map specification can be encoded in a shareable URL. Open a prepared link and explain how Hermes can inspect metadata, construct the specification and verify the result.
-5. End on the reusable outcome: a map link or project that can be reopened, not a new deployment for each question.
+Completed scripts can run again without regenerating their implementation for every reporting cycle.
 
-**Suggested illustrative request:** “Open this approved public layer, style the selected numeric field, preserve the publisher’s no-data codes, and prepare a shareable map. Verify the rendered layer and legend before returning the link.” This is a proposed rehearsal prompt, not a historical transcript or an already executed run.
+**Boundary:** A profile organizes configuration and state. Filesystem, database and network controls determine what the running software can access. Profile separation does not replace those controls.
 
-**Documented agent paths:** Text-only link generation; code-assisted source inspection and specification validation; browser automation through the exposed application API. These are documented capabilities, not interactions independently tested in this outline revision.
+**Transition:** “That still leaves a clear division between what the model assists with, what the GIS tools calculate and what people decide.”
 
-**Repeatability lesson:** Capture the source, filter, renderer/classes and view state. A saved style does not freeze a live dataset; preserve the source vintage or approved snapshot separately.
+### 6. The division of work — 03:30–04:10
 
-**Performance lesson:** Use source inspection and structured map specifications before unnecessary browser clicking. Browser checks still matter: a valid specification does not prove correct rendering.
+**Speaker: Silas.**
 
-**Boundary:** Sharing is a separate user action. Only approved public data and non-sensitive configuration should enter a share link; no tokens, private endpoints or sensitive attributes. No link was published or shared externally in this task.
+**On screen:** Three columns headed “Model and agent,” “GIS tools” and “People.”
 
-**FOSS4G framing:** The site calls itself open source, while its interface identifies the ArcGIS Maps SDK. Distinguish the application’s license from the SDK and hosted-service terms; do not describe the whole stack as FOSS without checking licenses. Build provenance for GISMap was not established from this session search, so avoid unsupported model-by-model authorship claims.
+**Purpose:** Make responsibility explicit.
 
-### 7. Demo 2: the 311 app with 3D columns — 10:00–13:00
+- **Model and agent:** Interpret the question, inspect fields, assist code development, explain errors and summarize recorded results. Stop when a missing input or assumption needs review.
+- **GIS tools:** Apply date filters and join rules, process geometry, calculate measurements and produce files and counts that another person can inspect.
+- **People:** Choose the question and suitable sources, decide whether the map answers the question, assess limitations and approve authoritative changes or public release.
 
-**Speaker: Dara.**
+Explain the working pattern in ordinary language: approved data enters tested processing, which produces compact map or report files and a record of the checks.
 
-**Selected app:** The 311 visualization with 3D columns, as corrected by Dara. This is not Sacramento 311 Atlas or the point-based Sacramento 311 3D Explorer. Its exact title and URL remain unconfirmed; do not reuse the rejected Explorer URL.
+**Important distinction:** AI assistance during development does not require a model call for every visitor to the finished map. A prepared report can remain a conventional web page.
 
-**Purpose:** Lead Dara’s half with the spatial visualization, then connect it to the data and development workflow.
+**FOSS4G connection:** A source hosted through ArcGIS REST can feed an open-source processing stack. Source hosting, software licenses, data rights and basemap terms remain separate questions.
 
-**Proposed three-minute demonstration, subject to the actual app’s controls:**
+### 7. Choosing a working environment — 04:10–07:00
 
-1. Open a rehearsed view with the columns visible and establish the dataset and reporting period.
-2. Explain exactly what a column represents and what height and color encode. Confirm the spatial unit, units, scaling and aggregation before presenting; do not assume raw counts, rates, grid cells or a specific rendering library.
-3. Use one verified interaction to explore the pattern, such as selecting a column or changing an available filter. Confirm the actual interaction during rehearsal rather than promising controls not yet inspected.
-4. Connect the displayed result to its source and limitations. 311 reporting activity is not a direct measure of population, unmet need or departmental performance.
-5. Briefly explain Hermes’ role in the build using verified project evidence, then transition to the recurring permit report.
+**Speaker: Silas.**
 
-**Performance connection:** Discuss aggregation, rendering limits and camera/interaction responsiveness only as supported by the selected implementation. Do not carry over the rejected Explorer’s point offsets, source partitions, acquisition counts, Ledger or sampling behavior.
+**On screen:** The editable comparison table for Hermes, Claude Code and Codex.
 
-**Readiness:** App identity and URL are pending. No current browser or analytical acceptance claim is made for this demo. Reserve the segment now; finalize the exact click path after identifying the correct application.
+**Purpose:** Explain the workflow choice without presenting a product ranking.
 
-### 8. Demo 3: Sacramento permit report — 13:00–15:00
+**Hermes:** Fits work that continues across source research, processing, application development and recurring reports. Project details, procedures and messaging can support that continuity. It also introduces setup and maintenance responsibilities.
 
-**Speaker: Dara.**
+**Claude Code:** Fits repository development, debugging, testing and review in an existing Claude development environment. Its available integrations, skills and automation may already meet the need.
 
-**URL:** https://sacbuildingpermits.vercel.app
+**Codex:** Fits implementation, testing and review, including scripted development and repeated code tasks. Direct use of the coding workflow may be sufficient for a focused change.
 
-**Purpose:** Finish the demos with practical recurring value: a month of permit data turned into a reviewable report.
+**Suggested explanation:**
 
-**Proposed two-minute sequence:**
+> “I use Hermes when I want continuity across the wider GIS workflow. I still use Claude Code and Codex for development. The choice depends on the job and the setup we already maintain.”
 
-1. Establish the archived June 2026 reporting period and summary.
-2. Show the parcel outlines and clustered map markers, explaining what each represents.
-3. Show an unmatched record in the table. The displayed report lists 1,597 permits, 1,568 parcel-matched and 29 unmatched; these are archived report figures, not a fresh analysis.
-4. Explain the repeatable pattern: retrieve → validate dates/keys → associate parcels → calculate → render → review.
+**Reference detail for questions:**
 
-**Hermes contribution:** Assistance developing and iterating the reporting workflow. Do not claim the refresh schedule is currently active or all prose was generated autonomously without corresponding evidence.
+- Reusable skills and tool integrations are not exclusive to Hermes.
+- Claude Code also documents memory and automation. Avoid describing it as terminal-only or unable to support recurring work.
+- Codex CLI is open source under Apache-2.0. Do not use a simple open-versus-closed distinction to compare Hermes with Codex CLI.
+- A framework’s license does not establish the terms of its model providers, SDKs, data or basemaps.
+- Provider flexibility does not guarantee equivalent output quality when changing models.
+- For one bounded code change, an additional coordination layer may add more maintenance than value.
 
-**GIS lesson:** Issued-permit sources are non-spatial tables; parcel associations supply geography. Issued does not mean completed, valuation is not actual spending, and parcel geometry is not a surveyed construction footprint.
+**Evidence limit:** No equivalent-input, repeated-run speed or accuracy benchmark accompanies this presentation. Do not claim that one environment is faster, cheaper or more accurate by a measured percentage.
 
-**Performance lesson:** Prepare the report once rather than requiring model inference for each reader interaction.
+**Timing:** Keep the table discussion focused. Start GISMap Online at 07:00.
 
-**Transition to practice:** “Three different products, the same discipline: known sources, explicit rules, reusable tools and outputs we can inspect.” The spatial owner brief can summarize any of them: question, owner, period, source, map, findings, exclusions and next decision.
+### 8. GISMap Online — 07:00–10:00
 
-### 9. Which skills should you use? — 15:00–16:00
+**Speaker: Silas.**
 
-**Speaker: Dara.**
+**On screen:** The supplied portrait screenshot of the GISMap Online welcome screen, with text about source selection, field styling and saved views.
 
-**On screen:** Source → data QA → analysis → map → verification.
+**Application:** https://www.gismap.online/
 
-Keep the spoken version to five categories: source validation, data QA, analysis, presentation and testing. The package names below are reference notes, not a list to read aloud in this one-minute segment:
+**Agent guide:** https://www.gismap.online/guides/ai-agents/
 
-Show a small task-focused bundle from the configured Mercator library:
+**Purpose:** Demonstrate a reusable browser mapping workspace and a map that someone else can reopen.
 
-- **`arcgis-rest-service-validator`:** inspect service/layer metadata, fields, query behavior and completeness before treating a source as usable.
-- **`geospatial-data-qa-pipeline`:** validate geometry, CRS, duplicates, nulls and record accounting before analysis or publication.
-- **`geopython-analysis-engineering`:** turn Python spatial work into reusable modules, fixtures and reproducible environments.
-- **Presentation-specific skills:** `arcgis-maps-sdk-javascript` for ArcGIS scene/view behavior; `web-map-open-source` for Leaflet/MapLibre work. Choose by the actual application, not by a blanket stack preference. Neither skill changes SDK, data or basemap licensing terms.
-- **`gis-testing-performance-observability`:** check the user journey, data agreement, failure states and measured performance.
+**Three-minute demonstration plan:**
 
-Optional additions for the task: cartographic review, code-agent delegation, and clear technical writing. Do not preload an entire catalog because it exists.
+1. Open one prepared public layer or a small approved GeoJSON. Establish its publisher and date.
+2. Inspect a useful field. State its units and how missing values appear.
+3. Apply one meaningful style and inspect the rendered layer and legend.
+4. Open a prepared saved view or map link. Explain which filters, classes and camera settings it preserves.
+5. End on the reusable result rather than touring every control.
 
-**Important packaging note:** These names describe Dara’s configured library, not a guaranteed default Hermes installation. Several packages have commercial license terms. Do not distribute their text or present them as freely installable conference handouts without permission. Attendees can implement the same procedural categories with appropriately licensed skills.
+**Illustrative request for rehearsal:**
 
-**Show an illustrative skill contract, not a wall of instructions:**
+> “Open this approved layer, style the selected field and check the legend before returning a map link. Preserve the source’s missing-value codes and record the source date.”
 
-```text
-Task: create a monthly permit report
-Inputs: approved source, reporting month, parcel source
-Rules: inspect date types; preserve unmatched records
-Outputs: report, map-ready data, exclusions and source manifest
-Checks: counts reconcile; map and table agree; rerun is safe
-Stop: source schema changed or an input is unavailable
-```
+This is a proposed task, not a quoted transcript of an executed run.
 
-**Speaker line:** “A good skill contains the checks and stop conditions—not just the happy path.”
+**Repeatability lesson:** Saving a map view does not freeze a changing source. Record the source vintage or preserve an approved snapshot separately.
 
-### 10. How to get repeatable results — 16:00–17:00
+**Performance lesson:** Inspect structured source metadata and prepare the map specification before relying on repeated browser actions. Still inspect the rendered geometry.
 
-**Speaker: Dara.**
+**Current evidence:** The deck contains the supplied welcome-screen image. It is not an image of a completed analysis. The application could not render its map in the review environment because WebGL was unavailable, so a complete interactive path remains a rehearsal task.
 
-**On screen:** “Repeatability comes from a contract, not a lucky conversation.”
+**Release boundary:** Keep credentials, private endpoints and sensitive attributes out of shared links. Explain the application, SDK and service terms separately.
 
-Use the one-minute slide to name five practices; retain the detail below as speaker reference:
+**Handoff:** Use the agreed wording and give Dara control at 10:00.
 
-1. **Define the task contract.** User, question, geography, period, output and explicit non-goals. State what counts as acceptance.
-2. **Freeze the moving parts.** Record data snapshot, source retrieval time, timezone, code revision, dependencies, parameters, skill revisions and actual model identity where available.
-3. **Reuse deterministic execution.** Stable scripts and explicit inputs; no hidden notebook state; no new implementation for every refresh. Make reruns safe.
-4. **Test the same evidence.** Known-answer fixtures, boundary/null/empty cases, counts, joins, geography, browser interaction and independent review.
-5. **Save the artifact and provenance.** Preserve commands, manifest, test results and unresolved limitations. Bind approval to the revision actually tested.
-
-Model output can vary even when the model is pinned. The goal is stable acceptance criteria and reproducible analytical results—not identical prose.
-
-**Illustrative improved request, not a historical transcript:**
-
-> “Using the approved snapshot and existing reporting script, produce the selected month’s report. Preserve unmatched records. Do not change the date or join rules. Reconcile source and output counts, test the map and table, and stop before publication.”
-
-**One brief failure lesson:** A previous tree prototype passed builds and tests while its polygons failed to render. A passing build is not GIS acceptance. Do not let this become a third lengthy demo.
-
-### 11. Performance: improve the workflow, not just the model — 17:00–19:00
+### 9. Sacramento 311 — 10:00–12:15
 
 **Speaker: Dara.**
 
-**On screen:** Three separate budgets: agent, GIS pipeline, application.
+**On screen:** The supplied **Service Terrain** screenshot, headed “Public 311 Snapshot · Sacramento, CA,” with colored hexagonal columns. Adjacent text covers column meaning, comparisons and record checks.
 
-**Agent efficiency:**
+**Selected application:** Service Terrain. The exact live URL has not been supplied. Use this identified columns visualization rather than a different point-based 311 application.
 
-- Use APIs, scripts and compact structured results before browser scraping when possible.
-- Filter and aggregate near the data; do not send entire feature collections into model context.
-- Load relevant skills and hand off bounded tasks rather than duplicating long conversations.
-- Parallelize independent work only. Extra agents add coordination cost and can create rework.
-- Set time, request, output and retry limits. Stop unsupported or unavailable model lanes rather than silently changing them.
-- Use script-only scheduled execution when no reasoning is needed; Hermes documents a no-agent cron mode.
+**Purpose:** Start Dara’s section with a spatial example and explain how interpretation depends on data definitions.
 
-**GIS pipeline performance:**
+**Two-minute-fifteen-second demonstration plan:**
 
-- Retrieve required fields, rows and geography; honor pagination and reconcile counts.
-- Use appropriate spatial indexes and vectorized operations before adding distributed compute.
-- Cache approved source snapshots and derived aggregates with explicit freshness rules.
-- Separate heavy processing from presentation. The permit report illustrates prepared output; the 311 columns demo should illustrate its verified aggregation and rendering choices, without assuming the architecture before inspection.
+1. Open the prepared view and establish the source and reporting period.
+2. Explain the spatial unit and the precise meaning of height and color using the application’s legend or information panel.
+3. Demonstrate one rehearsed interaction, such as inspecting a column or an available filter, only if the application actually supports it.
+4. Relate the displayed values to the source records and explain exclusions or repeated reports.
+5. End on what the visualization helps a reviewer inspect, then move to the permit report.
 
-**Application performance:**
+**Interpretation:** A 311 record represents a submitted service request. Reporting access, habits, repeat reports and the chosen period can all affect patterns. Counts alone do not establish unmet need, severity, population or departmental performance.
 
-- Use clustering, generalized display geometry or vector tiles when the workload warrants them.
-- Lazy-load details; keep map, table and filter state consistent.
-- Inspect actual geometry rendering, cold/warm load behavior, mobile interaction and failures of external basemaps.
+**What remains to verify:** The screenshot identifies Service Terrain and shows hexagonal columns. It does not establish the reporting period, height or color definitions, aggregation rules, or implementation library. Confirm those before making analytical claims.
 
-**What to measure:**
+**Performance discussion:** Explain aggregation, payload or renderer choices only when supported by the actual project. Do not transfer technical details or counts from another 311 application.
 
-- Agent: wall-clock time to an accepted result, model/tool cost, retries and human correction time.
-- Pipeline: input volume, runtime, peak memory, completeness and data freshness.
-- App: payload size, time until usable map data renders, filter latency and error rate.
+**Fallback:** Use the supplied screenshot to discuss the structure and required checks if the live view is unavailable.
 
-No quantified Hermes-versus-Claude-Code-versus-Codex benchmark was performed for this outline. Do not claim a percentage improvement. A fair comparison needs equivalent inputs, quality gates, multiple runs and disclosure of model, permissions, environment and warm caches.
-
-### 12. Start with one workflow — 19:00–20:00
+### 10. Sacramento permit report — 12:15–14:15
 
 **Speaker: Dara.**
 
-**On screen:** One dataset. One repeatable question. One reviewed output.
+**On screen:** Both supplied September report images: the summary and the parcel map with its legend and attribution. Large editable figures show 1,445 permits, 1,411 parcel matches, 34 unmatched and $116.35 million in declared valuation.
 
-**Attendee exercise:** Pick a monthly report you already produce. Use a public or approved snapshot, write down the validation rules, and ask the agent to run the existing tools against that contract. Compare the result with a known answer before extending access or scheduling anything.
+**Application:** https://sacbuildingpermits.vercel.app
 
-Keep the MVP to that bounded workflow. A multi-agent platform is not a prerequisite.
+**Period:** September 2026 issued permits. This supersedes the June example in the original outline.
 
-Close with:
+**Report figures from the supplied snapshot:**
 
-> “The useful improvement is not an agent that sounds confident. It is a workflow you can run again, inspect and correct.”
+| Measure | Value |
+| --- | --- |
+| Issued permits | 1,445 |
+| Parcel-matched records | 1,411 |
+| Unmatched records | 34 |
+| Declared valuation | $116,352,642.84, shown as $116.35m on the slide |
+| Largest permit | $20,092,704.25, shown as $20.09m |
+| Largest permit identifier and address | COM-2509363, 1133 Corporate Way |
+| Report refresh | October 26, 2026 |
+| Latest returned status date stated in the report | September 27, 2026 |
 
-Final slide: official Hermes documentation and the three selected demo links after their exact demonstration paths pass rehearsal. Add a handout/repository QR code only after an authorized package is actually published and tested.
+**Two-minute demonstration plan:**
 
-### Questions — 20:00–25:00
+1. Establish September and the displayed refresh date. These are figures from the supplied report snapshot, not a new extraction performed for the presentation.
+2. Point out that 1,411 matched records plus 34 unmatched records reconcile to the 1,445 total.
+3. Show parcel outlines, clusters and the legend. Explain that City permit records and county parcel geography have different roles.
+4. Retain unmatched records in the accounting. Show an example only if a rehearsed table or record view supports it.
+5. Briefly describe the recurring sequence: retrieve approved records, check dates and keys, associate parcels, calculate the summary, render the report and review it.
 
-**Speakers: Silas and Dara.** Silas leads product/harness and GISMap questions; Dara leads 311, permits, skills and performance questions.
+**Interpretation limits:** Issued permits do not establish completed construction. Declared valuation does not measure actual expenditure. Parcel outlines do not establish the construction footprint. The snapshot states that later dates beyond September 27 are not represented, and current status/date fields can change historical totals.
 
-Keep the final slide visible. Likely questions: data privacy, local models, skill portability, model cost, framework maintenance and government/on-prem deployment.
+**Hermes contribution:** Describe assistance developing and iterating the workflow. An active automatic refresh schedule or autonomous authorship of all report prose requires separate evidence.
+
+**Transition:**
+
+> “The report also depends on decisions we need next month: which date field to use, how the parcel join works and what to do with unmatched records. That is where the project notebook comes in.”
+
+### 11. Obsidian as a second brain — 14:15–15:00
+
+**Speaker: Dara.**
+
+**On screen:** An Obsidian source-note screenshot from the supplied portfolio deck. It shows an article’s source URL, author, dates, tags, related topics and captured summary. The slide describes a linked project notebook.
+
+**Purpose:** Show where longer project knowledge lives between conversations and reporting cycles.
+
+Explain “second brain” as a practical name for an organized external notebook. In this workflow, it retains research, decisions, source definitions and procedures that would be difficult to reconstruct from chat history alone.
+
+**Talk points:**
+
+- An Obsidian vault is a folder of local Markdown notes. Other text editors can read the files.
+- Source links and dates help a reader distinguish original evidence from a written summary.
+- Links and tags connect a source note to project decisions and reusable procedures. Backlinks reveal other notes that refer to the current note.
+- The captured note provides traceability. It does not make the underlying article’s claims automatically correct.
+
+**Suggested line:**
+
+> “The value is keeping the explanation with the source, so we can return to the decision and check why we made it.”
+
+**Boundary:** The vault is separate from Hermes’ compact saved memory. Access, search and writes require configuration. A local file can still be included in a request to a remote model if that is how the system is configured.
+
+### 12. Project knowledge in a GIS workflow — 15:00–15:45
+
+**Speaker: Dara.**
+
+**On screen:** Capture the evidence, retrieve for the task, check the output and keep the lesson. The Obsidian logo identifies the notebook component.
+
+**Purpose:** Connect the second-brain explanation directly to the permit example.
+
+1. **Capture the evidence:** Keep source URLs, field definitions and dated project notes. Link summaries back to their sources.
+2. **Retrieve for the task:** Read the reporting-date definition, parcel join rules and known exclusions. Compare those notes with current source metadata.
+3. **Check the output:** Run existing scripts, reconcile matched and unmatched records and inspect the actual report and map.
+4. **Keep the lesson:** After review, update the note or procedure. Record the change and identify the result that a person approved.
+
+**Concrete example:** A note can explain why the report uses one status-date field and how it handles a missing parcel association. The script implements the calculation. The report exposes the result. The reviewer checks the relationship among all three.
+
+**Evidence limit:** This is an illustrative working pattern. It does not claim that every capture, retrieval, correction and approval currently happens automatically.
+
+**Transition:** “Once those decisions are stable, the steps and checks can become a reusable procedure.”
+
+### 13. Reusable GIS procedures — 15:45–16:30
+
+**Speaker: Dara.**
+
+**On screen:** A task-focused skill contract covering inputs, data rules, outputs, checks and stop conditions.
+
+**Purpose:** Explain what makes a skill useful beyond a general prompt.
+
+Use the monthly permit report as the example:
+
+- **Inputs:** Approved permit snapshot, reporting month and parcel source.
+- **Data rules:** Inspect date types and timezones. Preserve identifiers and unmatched rows.
+- **Outputs:** Report, map-ready data, source record, exclusions and unresolved issues.
+- **Checks:** Source and output counts reconcile. The map agrees with the table.
+- **Stop conditions:** A required source is unavailable, its schema changes or a check fails.
+
+**Suggested line:**
+
+> “The procedure records what must be checked, including when the task should stop.”
+
+Existing scripts still perform the calculations. The skill describes how to use and verify them. Load procedures relevant to the task rather than the entire catalog.
+
+**Reference detail:** Source validation, data QA, analysis, mapping and testing are the useful categories. Keep package names on backup slide 20. Availability and license terms vary, so the configured packages are not a promise of default Hermes installation or freely redistributable handouts.
+
+### 14. What a repeatable run records — 16:30–17:15
+
+**Speaker: Dara.**
+
+**On screen:** The task, inputs, execution and evidence.
+
+**Purpose:** Make a report auditable and safe to rerun.
+
+**Talk points:**
+
+- **Task:** Record the question, geography, period, expected output and acceptance checks.
+- **Inputs:** Record the source snapshot, retrieval time, timezone, code revision, dependencies and procedure revisions. Include the actual model identity when available.
+- **Execution:** Use existing scripts with explicit parameters and stable date and join rules. Check that a rerun does not duplicate records or silently alter the method.
+- **Evidence:** Preserve reconciled counts, known-answer tests, geometry and interaction checks, remaining limitations and the reviewed revision.
+
+Model wording may vary. The source, calculation rules and acceptance conditions should remain explicit.
+
+**Brief failure example:** A prior tree prototype passed its build and tests while polygons failed to render. Use the example to explain why the browser check must examine the data and geometry, not just whether the page loads.
+
+**Reference task wording:** “Use the approved snapshot and existing script. Keep the date and join logic. Preserve unmatched records, test the map and table, and stop before publication.”
+
+### 15. Agent time and cost — 17:15–18:00
+
+**Speaker: Dara.**
+
+**On screen:** Time to an accepted result, structured work, model inputs, limits and recurring jobs.
+
+**Purpose:** Measure the whole task, including corrections.
+
+Count elapsed time, retries, tool requests and model cost. Include the time a person spends making the result usable.
+
+**Practices:**
+
+- Use APIs and existing scripts for routine data operations.
+- Filter and aggregate close to the data. Give the model relevant fields and compact summaries instead of entire feature collections.
+- Load the procedures that apply to the current task.
+- Set request, retry and output limits. Stop an unavailable or unsupported path rather than silently changing the method.
+- Schedule ordinary scripts when recurring work needs no reasoning.
+
+Additional agents can add coordination and rework. Parallel work is useful only when the tasks are independent and the benefit exceeds that overhead.
+
+**Evidence limit:** No comparative cost or speed benchmark is presented. A fair comparison would hold sources, task, quality checks, permissions and environment constant across multiple runs.
+
+### 16. Processing and map performance — 18:00–19:00
+
+**Speaker: Dara.**
+
+**On screen:** GIS processing and browser experience, with the reminder that a passing build can still leave the map empty.
+
+**Purpose:** Separate processing efficiency from the experience of opening and using the map.
+
+**GIS processing:** Retrieve required fields, rows and geography. Honor pagination and reconcile counts. Use suitable spatial indexes and vectorized operations before adding a more complex computing stack. Keep prepared aggregates and cached snapshots tied to their age and freshness rules.
+
+**Browser experience:** Measure time until usable map data appears. Check geometry, filters and agreement with any table. Use clustering, generalized display geometry or vector tiles when warranted by the workload. Test cold and warm loads, mobile interaction and external-basemap failures.
+
+**Useful measures:**
+
+| Layer | Measures |
+| --- | --- |
+| Agent | Accepted-result time, model and tool cost, retries, human correction time |
+| Processing | Input volume, runtime, peak memory, completeness, freshness |
+| Application | Payload size, usable-map time, filter latency, errors |
+
+Keep implementation claims specific to evidence from each application. The Service Terrain screenshot alone does not establish a renderer, data pipeline or performance result.
+
+### 17. A first workflow — 19:00–20:00
+
+**Speaker: Dara.**
+
+**On screen:** A monthly report you already produce, with four steps: define it, reuse tools, check it and extend it.
+
+**Purpose:** Give attendees a manageable next step.
+
+Ask the audience to choose a recurring report with a known result and an approved source.
+
+1. Define one question, a reporting period and a reviewable output.
+2. Use an approved snapshot and an existing processing script.
+3. Reconcile counts and compare the result with a known answer.
+4. Extend access or introduce scheduling only after the bounded workflow passes review.
+
+**Illustrative exercise:** Produce one month’s permit report, retain unmatched records and stop before publication. Keep a short note of the source, rules, checks and unresolved issues.
+
+The first implementation does not need a multi-agent platform or a new application for every question.
+
+**Suggested close:**
+
+> “Choose a report you already understand. Keep the sources and rules with it, make the checks repeatable, and leave a result that another person can inspect and correct.”
+
+Move to the questions slide at 20:00.
+
+### 18. Questions — 20:00–25:00
+
+**Speakers: Silas and Dara.**
+
+**On screen:** Corrected speaker names, discussion topics and links to Hermes documentation, GISMap Online and the September permit report application.
+
+**Silas leads:** Hermes, tool choice, model-provider configuration and GISMap Online.
+
+**Dara leads:** Service Terrain, permits, Obsidian, procedures, repeatability and performance.
+
+Likely questions include data handling, local deployment, maintenance cost, portability of skills, project-note organization and government use.
+
+Use the hidden backup slides only when they answer a specific question. The Service Terrain URL remains to be supplied. Add a repository or handout QR code only after its destination has actually been published and tested.
+
+## Hidden backup slides
+
+### 19. Monthly permit report
+
+**Use when:** An attendee asks what the actual task instructions or acceptance conditions look like.
+
+**On screen:** A concise, illustrative task contract.
+
+- **Task:** Produce the selected month’s report using the existing script.
+- **Inputs:** Approved permit snapshot, parcel source and reporting month.
+- **Rules:** Preserve date and join logic, identifiers and unmatched rows.
+- **Outputs:** Report, map data, source record, exclusions and unresolved issues.
+- **Checks:** Counts reconcile, map and table agree, reruns do not duplicate records.
+- **Stop:** A required source is missing, the schema changes or a check fails.
+
+Explain how the person reviewing the result decides whether to publish it. This is example wording, not a historical agent transcript. A completed output and approval should refer to the same reviewed revision.
+
+### 20. Mercator skill references
+
+**Use when:** An attendee asks which procedure categories or configured packages support the work.
+
+| Purpose | Configured package | Checks to include |
+| --- | --- | --- |
+| Source checks | `arcgis-rest-service-validator` | Fields, query behavior and record completeness |
+| Data QA | `geospatial-data-qa-pipeline` | CRS, geometry, duplicates and missing values |
+| Python analysis | `geopython-analysis-engineering` | Reusable modules, fixtures and environments |
+| Maps | `arcgis-maps-sdk-javascript`; `web-map-open-source` | Rendering, legends and map interaction |
+| Testing | `gis-testing-performance-observability` | User journeys, data agreement and measured performance |
+
+These names describe the configured GIS agent profile’s library. Some packages have commercial terms. Do not distribute their bodies without permission. Attendees can implement the same categories with appropriately licensed procedures.
+
+Choose map procedures for the actual application stack. A skill’s license does not change the terms of an SDK, basemap or dataset.
+
+### 21. Public-sector use
+
+**Use when:** The discussion turns to organizational data, access or publication.
+
+**Talking points:**
+
+- Begin with public or explicitly approved sources. Keep restricted data and credentials out of prompts, screenshots and logs.
+- Separate inspection from authoritative edits and release. Tie approval to the version actually reviewed.
+- Use filesystem, database, network and sandbox controls. Profile separation alone is not security isolation.
+- Treat service attributes, web pages and retrieved documents as source material, not authority to change the task.
+- Review software, data, basemap and skill terms separately.
+- Explain 311 reporting limitations and the difference between permit valuation, expenditure and completed work.
+- Trace where data actually goes. A local host can still call a remote model or tool.
+
+Keep the discussion tied to the source and action in question rather than claiming a general guarantee of privacy, safety or correctness.
+
+### 22. Hermes setup and access
+
+**Use when:** An attendee asks how the described setup runs across devices.
+
+**On screen:** Phone and terminal access to a Mac Mini host, with rows for access, host and workspaces.
+
+**Talking points:**
+
+- Telegram on a phone or a terminal on a laptop provides a way to send tasks and inspect results.
+- A Mac Mini runs Hermes and stores the project files.
+- Tailscale provides private network access between devices in the described setup.
+- Mercator keeps its configuration, memory and skills. Approved Obsidian notes supply longer project context.
+- The host and the model provider have distinct roles. Local hosting does not establish local-only processing.
+
+These setup details come from the supplied portfolio presentation. They are not an inspection of the current hardware or configuration. Avoid unsupported claims about model sizes, local memory capacity or guaranteed offline capability.
 
 ## Demo evidence and readiness
 
-**Selected lineup:** GISMap Online (Silas) → 311 app with 3D columns (Dara; exact URL pending) → Sacramento permit report (Dara). Both the Change Instrument and the point-based 311 Atlas/Explorer are excluded.
+**Lineup:** GISMap Online with Silas, then Service Terrain and the September permit report with Dara. The second-brain explanation follows the permit report, rather than interrupting the three application examples.
 
-- **311 columns app:** Dara explicitly rejected the previously selected point-based Explorer. Its historical URL and source facts do not apply. The correct columns app needs identification and an exact demonstration-path check before rehearsal.
-- **GISMap Online:** The supplied homepage, examples catalog and agent guide were retrieved. The guide documents map specifications, source inspection, styling, share links and browser automation. No dataset was loaded, map link generated, export exercised or runtime AI connection tested in this revision. Those remain rehearsal checks.
-- **Permit report:** The previous outline preparation fetched the archived June report and included a focused browser check of rendered Leaflet tiles and markers/clusters. No new data pipeline run was performed. Freeze the demonstrated page so a homepage update does not change the reporting month unexpectedly.
+| Item | Evidence included in the deck | Remaining rehearsal work |
+| --- | --- | --- |
+| Hermes | Supplied profile image and an explanation of tools, procedures, memory and scheduling | Verify any live terminal or messaging interaction before using it on stage |
+| GISMap Online | Supplied welcome-screen screenshot and documented source/style/saved-view workflow | Rehearse the source, rendered geometry, legend and saved-view path in a browser with working WebGL |
+| Service Terrain | Supplied image identifies the Sacramento public 311 columns visualization | Supply the exact URL and confirm the reporting period, legend, aggregation and one interaction |
+| Permit report | Supplied September summary and map images, with totals and refresh date | Open the exact September state, verify a short map/table path and preserve the demonstrated snapshot |
+| Obsidian | A source note and logo extracted from the supplied portfolio presentation | If using the live vault, choose an approved project-only path and avoid unrelated personal notes |
+| Task and skill examples | Editable descriptions of procedures, inputs, checks and stop conditions | Prepare an appropriately licensed handout example if one will be distributed |
 
-The outline is revised; a live-demo readiness assessment and recording kit are not yet complete. No application changes, model configuration changes or deployments are part of this revision.
+The supplied screenshots make the slides usable without live rendering. They do not establish that all application controls, schedules, data refreshes or model connections have been tested. No application deployment or new source-data pipeline run is part of this outline update.
 
 ## Five preparation tasks
 
-1. Freeze one short interaction path per app: GISMap source/style/share state for Silas; the correct 311 columns view and verified interaction for Dara; permit month/map/unmatched record for Dara.
-2. Verify all three paths in a browser, including actual geometry, relevant counts, source coverage, loading/error behavior and external basemap dependencies. Verify any exports or shared links before promising them on stage.
-3. Record short walkthroughs and capture sanitized screenshots as fallbacks. Prepare local playback rather than depending entirely on venue Wi-Fi or live model inference.
-4. Assemble a concise takeaway: task contract, validation checklist and appropriately licensed example skill. Keep commercial skill bodies, private transcripts and credentials out of public materials.
-5. Rehearse to the timing budget: Silas 10 minutes (Hermes/context 4, harness comparison 3, GISMap demo 3); Dara 10 minutes (311 columns demo 3, permits demo 2, skills/repeatability 2, performance 2, closing 1); joint Q&A 5 minutes. Rehearse the handoff at 10:00. Verify conference expectations and every final link.
+1. **Freeze the demonstration path.** Use one prepared GISMap layer and style, one Service Terrain view and interaction, and one September permit summary/map/record path. Confirm the Service Terrain URL and definitions.
+2. **Verify the displayed evidence.** Check geometry, units, counts, date coverage, exclusions, loading behavior and map/table agreement. Keep the September report’s September 27 cutoff and October 26 refresh context available.
+3. **Prepare fallbacks.** Keep the current screenshots and short local recordings available. Avoid depending on conference Wi-Fi, live model inference, sign-ins, new installations or fresh builds.
+4. **Prepare the takeaway.** Provide a short task contract, source/check record and licensed example procedure. Include the project-notebook pattern without publishing unrelated vault contents or commercial skill bodies.
+5. **Rehearse the revised clock.** Silas ends GISMap at 10:00. Dara covers Service Terrain and permits by 14:15, the second-brain material by 15:45, and closes at 20:00. Leave the five-minute questions segment intact.
 
-Three demos fit only if each demonstrates one bounded workflow. Cut feature touring, not the skills/repeatability discussion that makes the talk useful. Do not perform installations, sign-ins, fresh app builds or large downloads on stage.
+If the talk runs long, shorten navigation and feature touring. Use screenshots for the same evidence rather than dropping the checks and limitations that explain the workflow.
 
-## Safety and public-sector discussion notes
+## Source and image notes
 
-- Start with read-only public or explicitly approved data.
-- Separate data inspection from authoritative edits, sending messages and publication approval.
-- Treat service attributes, websites and retrieved documents as untrusted data, not instructions.
-- Keep credentials and restricted data out of prompts, screenshots and logs.
-- Local hosting of a harness does not prove local-only processing if a remote model or tool is configured.
-- Use real filesystem, database, network and sandbox controls; profile separation alone is not security isolation.
-- Review data rights, basemap terms, dependencies and skill provenance independently.
-- Do not infer departmental performance, need or severity from 311 counts; do not infer completed construction or economic impact from permit valuations.
+- The original detailed outline provides the session structure, demo framing, skill categories and practical checks.
+- The current reordered PowerPoint supplies the exact 22-slide sequence and on-screen content.
+- `From_LLMs_to_GIS_Hermes_Portfolio.pptx` supplies supporting Hermes, memory, Obsidian and setup material. Relevant original file positions include slides 19–22 and 25–28. File positions are used because its visible numbering is inconsistent with its 36-slide count.
+- Hermes profile artwork: supplied `IMG_5742.jpeg`. Retain the supplied image without labeling it as an independently verified official logo.
+- GISMap Online screenshot: supplied `IMG_5741.jpeg`.
+- September permit summary: supplied `IMG_5740.jpeg`.
+- Permit map and legend: supplied `IMG_5739.jpeg`. Retain the Leaflet and OpenStreetMap contributor attribution.
+- Service Terrain screenshot: supplied `IMG_5738.jpeg`.
+- Obsidian source-note screenshot and logo: extracted from the supplied portfolio deck’s Obsidian slide. The source note is evidence of the notebook structure, not independent verification of the article it summarizes.
+- Cover photograph: Stephen Leonardi, “Aerial View of Sacramento’s Tower Bridge at Sunset,” Pexels. https://www.pexels.com/photo/aerial-view-of-sacramento-s-tower-bridge-at-sunset-34276098/ . License: https://www.pexels.com/license/ .
 
 ## Research references
 
-- Accepted session: https://talks.osgeo.org/foss4g-na-2026/talk/GXG78A/
-- Hermes overview: https://hermes-agent.nousresearch.com/docs/
+- Accepted session and current program listing: https://talks.osgeo.org/foss4g-na-2026/talk/GXG78A/
+- Hermes documentation: https://hermes-agent.nousresearch.com/docs/
+- Hermes memory: https://hermes-agent.nousresearch.com/docs/user-guide/features/memory/
 - Hermes skills: https://hermes-agent.nousresearch.com/docs/user-guide/features/skills/
 - Hermes profiles: https://hermes-agent.nousresearch.com/docs/user-guide/profiles/
-- Hermes scheduled tasks, including no-agent mode: https://hermes-agent.nousresearch.com/docs/user-guide/features/cron
-- Claude Code overview, memory and automation links: https://code.claude.com/docs/en/overview
+- Hermes scheduled tasks: https://hermes-agent.nousresearch.com/docs/user-guide/features/cron
+- Obsidian data storage: https://obsidian.md/help/data-storage
+- Obsidian backlinks: https://obsidian.md/help/plugins/backlinks
+- Claude Code overview: https://code.claude.com/docs/en/overview
 - Claude Code skills: https://code.claude.com/docs/en/skills
 - Codex CLI: https://developers.openai.com/codex/cli
-- Codex skills: https://developers.openai.com/codex/build-skills
 - Codex source and license: https://github.com/openai/codex
-- Permit report: https://sacbuildingpermits.vercel.app
-- 311 columns application: exact title and URL pending confirmation from Dara; do not substitute the point-based Explorer.
-- GISMap Online (user-supplied): http://gismap.online/
+- GISMap Online: https://www.gismap.online/
 - GISMap agent guide: https://www.gismap.online/guides/ai-agents/
 - GISMap examples: https://www.gismap.online/examples/
+- Permit report application: https://sacbuildingpermits.vercel.app
+- Service Terrain: identified by the supplied screenshot. Exact application URL pending.
 
-Product capabilities evolve; recheck the official comparison references before final slide publication. Comparative recommendations above express workflow fit, not measured superiority.
+Session listing checked October 28, 2026. The outline uses the supplied September permit snapshot and the reviewed deck. Comparative statements concern workflow fit, not measured product superiority.
